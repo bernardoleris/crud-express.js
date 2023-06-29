@@ -1,0 +1,43 @@
+{
+  "name": "base-backend",
+  "version": "1.0.0",
+  "description": "Projeto de base para backend em NodeJs, Express e MongoDB para a CompJunior",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel ./src -d dist",
+    "start": "npm install --progress=false && npm run build && export NODE_ENV=production && node dist/index.js",
+    "dev": "npm install --progress=false && npm run build && export NODE_ENV=development && node dist/index.js",
+    "serve": "nodemon ./src/index.js --exec babel-node",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
+  },
+  "author": "Comp Júnior",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.17",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.9.2",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "slugify": "^1.6.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/node": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.21.5",
+    "babel-plugin-inline-json-import": "^0.3.2",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "nodemon": "^2.0.22",
+    "sonar-scanner": "^3.1.0"
+  }
+}
